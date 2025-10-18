@@ -1,15 +1,17 @@
 /* Base Styles & Variables */
 :root {
-    /* Color Palette */
-    --primary: #1a365d;      /* Deep blue */
-    --primary-light: #2c5282;  /* Lighter blue */
-    --secondary: #c53030;    /* Warm red */
-    --accent: #ed8936;       /* Orange accent */
-    --text: #2d3748;         /* Dark gray for text */
-    --text-light: #718096;   /* Light gray for secondary text */
-    --light: #f7fafc;        /* Off-white */
+    /* Color Palette - Matrix Freiburg */
+    --primary: #E30613;      /* Matrix Red */
+    --primary-light: #ff3d4a;  /* Lighter red */
+    --primary-dark: #b30000;   /* Darker red */
+    --secondary: #333333;    /* Dark gray */
+    --accent: #666666;       /* Medium gray */
+    --text: #1a1a1a;         /* Almost black for text */
+    --text-light: #4d4d4d;   /* Dark gray for secondary text */
+    --light: #f5f5f5;        /* Light gray */
+    --lighter: #fafafa;      /* Very light gray */
     --white: #ffffff;        /* Pure white */
-    --black: #1a202c;        /* Off-black */
+    --black: #000000;        /* Pure black */
     --gray-100: #f7fafc;
     --gray-200: #edf2f7;
     --gray-300: #e2e8f0;
@@ -75,6 +77,7 @@ body {
     background-color: var(--white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--white);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -159,25 +162,31 @@ ul, ol {
 .btn-primary {
     background-color: var(--primary);
     color: var(--white);
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-light);
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 12px rgba(227, 6, 19, 0.2);
 }
 
 .btn-outline {
     background-color: transparent;
-    border: 1px solid var(--primary);
     color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .btn-outline:hover {
     background-color: var(--primary);
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 12px rgba(227, 6, 19, 0.2);
 }
 
 .btn-text {
@@ -214,10 +223,11 @@ ul, ol {
     top: 0;
     left: 0;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 1000;
-    background-color: var(--white);
-    box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    border-bottom: 1px solid var(--light);
 }
 
 .navbar.scrolled {
@@ -349,12 +359,12 @@ ul, ol {
 
 .feature-card {
     background: var(--white);
-    border-radius: var(--rounded-xl);
-    padding: 2.5rem 2rem;
+    border-radius: var(--rounded-lg);
+    padding: 2.5rem;
     text-align: center;
     transition: var(--transition);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--light);
 }
 
 .feature-card:hover {
@@ -467,7 +477,9 @@ ul, ol {
 
 /* Training Section */
 .bg-light {
-    background-color: var(--gray-50);
+    background-color: var(--lighter);
+    border-top: 1px solid var(--light);
+    border-bottom: 1px solid var(--light);
 }
 
 .training-options {
@@ -479,12 +491,12 @@ ul, ol {
 
 .training-card {
     background: var(--white);
-    border-radius: var(--rounded-xl);
+    border-radius: var(--rounded-lg);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
     transition: var(--transition);
+    border: 1px solid var(--light);
     position: relative;
-    border: 1px solid var(--gray-200);
 }
 
 .training-card:hover {
