@@ -1022,7 +1022,153 @@ ul, ol {
     transform: translateY(-3px);
 }
 
+/* Trainers Section */
+.trainers-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trainer-card {
+    display: flex;
+    background: var(--white);
+    border-radius: var(--rounded-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+}
+
+.trainer-image {
+    flex: 0 0 40%;
+    min-height: 500px;
+    background-color: var(--gray-200);
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover .trainer-image img {
+    transform: scale(1.03);
+}
+
+.trainer-info {
+    flex: 1;
+    padding: 3rem;
+}
+
+.trainer-info h3 {
+    font-size: 1.75rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.trainer-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+.trainer-info h3 span {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.trainer-info p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.trainer-achievements h4 {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin: 2rem 0 1rem;
+}
+
+.trainer-achievements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trainer-achievements li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+}
+
+.trainer-achievements li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
 /* Responsive Styles */
+/* Responsive Styles for Trainers */
+@media (max-width: 1024px) {
+    .trainer-card {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+    
+    .trainer-image {
+        flex: 0 0 350px;
+        min-height: auto;
+    }
+    
+    .trainer-info {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trainer-card {
+        margin: 1.5rem 0;
+    }
+    
+    .trainer-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .trainer-info p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .trainer-image {
+        flex: 0 0 300px;
+    }
+    
+    .trainer-info {
+        padding: 1.5rem;
+    }
+    
+    .trainer-achievements h4 {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0.75rem;
+    }
+}
+
+/* General Responsive Styles */
 @media (max-width: 1024px) {
     .about-content {
         grid-template-columns: 1fr;
